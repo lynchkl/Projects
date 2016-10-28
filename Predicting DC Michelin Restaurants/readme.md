@@ -1,5 +1,6 @@
 #Predicting Michelin Star Restaurants in DC
-To predict which DC restaurants would receive Michelin stars, I began by scraping data on thousands of restaurants in NYC, SF and Chicago (the 3 other US cities with Michelin stars) and DC. I chose this data because most Michelin star restaurants are Zagat-reviewed. 
+##Overview
+To DC Michelin stars, I began by scraping data on thousands of restaurants in NYC, SF and Chicago (the 3 other US cities with Michelin stars) and DC. I chose this data because most Michelin star restaurants are Zagat-reviewed. 
 <p align ="center">
 <img src ="/Predicting%20DC%20Michelin%20Restaurants/images/Zagat.png" />
 </p>
@@ -27,7 +28,7 @@ To my chagrin, price was the strongest predictor in this model:
 <img src ="/Predicting%20DC%20Michelin%20Restaurants/images/importances.png" />
 </p>
 
-Ultimately, my model predicted 4 of the 12 Michelin star restaurants. Fatally, 5 of the winning restaurants weren't included in my dataset because they didn't have Zagat reviews (and Inn at Little Washington was excluded based on geography). Possibly Michelin restaurants are Zagat-reviewed elsewhere in the country *because* they are Michelin restaurants. 
+My model predicted 4 of the 12 Michelin star restaurants. Fatally, 5 of the winning restaurants weren't included in my dataset because they didn't have Zagat reviews (Inn at Little Washington was excluded based on geography). Michelin restaurants may be Zagat-reviewed elsewhere in the country *because* they are Michelin restaurants. 
 
 <p align ="center">
 <img src ="/Predicting%20DC%20Michelin%20Restaurants/images/results.png" />
