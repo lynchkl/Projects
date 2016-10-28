@@ -5,29 +5,49 @@ To predict which DC restaurants would receive Michelin stars, I began by scrapin
 </p>
 
 I began with exploratory data analysis: 
+<p align ="center">
+<img src ="/Predicting%20DC%20Michelin%20Restaurants/images/food%20ratings.png" />
 
-![Food Ratings](/Predicting%20DC%20Michelin%20Restaurants/images/food%20ratings.png)
+<img src ="/Predicting%20DC%20Michelin%20Restaurants/images/food%20ratings2.png" />
 
-![Food Ratings2](/Predicting%20DC%20Michelin%20Restaurants/images/food%20ratings2.png)
+<img src ="/Predicting%20DC%20Michelin%20Restaurants/images/cuisines.png" />
 
-![Cuisines](/Predicting%20DC%20Michelin%20Restaurants/images/cuisines.png)
+<img src ="/Predicting%20DC%20Michelin%20Restaurants/images/price.png" />
+</p>
 
+Based on the characteristics of my data and EDA, I used a random forest regression model: 
+<p align ="center">
+<img src ="/Predicting%20DC%20Michelin%20Restaurants/images/model.png" />
+
+<img src ="/Predicting%20DC%20Michelin%20Restaurants/images/model2.png" />
+</p>
+
+To my chagrin, price was the strongest predictor in this model:
+<p align ="center">
+<img src ="/Predicting%20DC%20Michelin%20Restaurants/images/importances.png" />
+</p>
+
+Ultimately, my model predicted 4 of the 12 Michelin star restaurants. Fatally, 5 of the winning restaurants weren't included in my dataset because they didn't have Zagat reviews (and Inn at Little Washington was excluded based on geography). Possibly Michelin restaurants are Zagat-reviewed elsewhere in the country *because* they are Michelin restaurants. 
+
+<p align ="center">
+<img src ="/Predicting%20DC%20Michelin%20Restaurants/images/results.png" />
+</p>
 
 ##Files included in this repository: 
 
-###Research & Zagat scraping
+###[Research & Zagat scraping](/Predicting%20DC%20Michelin%20Restaurants/files/Research%20&%20Zagat%20scraping.ipynb)
 This document includes research notes and the syntax to scrape ratings data from Zagat.
 
-###Cleaning Zagat data
+###[Cleaning Zagat data](/Predicting%20DC%20Michelin%20Restaurants/files/Cleaning%20Zagat%20data.ipynb)
 This syntax aggregates datasets and drops duplicates and unnecessary variables.
 
-###Scraping Michelin
+###[Scraping Michelin](/Predicting%20DC%20Michelin%20Restaurants/files/Scraping%20Michelin%20.ipynb)
 In this code I use Beautiful Soup to scrape Michelin restaurant names/stars from the Michelin website.
 
-###Zagat-Michelin merge
+###[Zagat-Michelin merge](/Predicting%20DC%20Michelin%20Restaurants/files/zagat-michelin%20merge.ipynb)
 Syntax to merge Zagat and Michelin data on restaurant name. Includes checking control totals and mismatches.
 
-###Michelin EDA
+###[Michelin EDA](/Predicting%20DC%20Michelin%20Restaurants/files/Michelin%20EDA.ipynb)
 Exploratory data analysis, which includes looking at relationships between: 
 * Michelin stars and Zagat cuisine type
 * Michelin stars and being on Open Table
@@ -36,12 +56,12 @@ Exploratory data analysis, which includes looking at relationships between:
 * Zagat food ratings across cities
 * Zagat food costs across cities
 
-###Michelin models
+###[Michelin models](/Predicting%20DC%20Michelin%20Restaurants/files/Michelin%20models.ipynb)
 Modeling, including the final model and submission output. Techniques used include:
 * Feature engineering: imputing missing values, label enconder for cuisine type, normalizing price by city
 * Train-test-split, training on NYC & SF, testing on Chicago
 * Due to the nature of the data (ordinal, dummy & continuous) models focus on CART options; final model is random forest regression
 * Assessed using confusion matrices and feature importances
 
-###Presentation
+###[Presentation](/Predicting%20DC%20Michelin%20Restaurants/files/Presentation.pptx)
 PowerPoint presentation
