@@ -1,6 +1,6 @@
 #Predicting Michelin Star Restaurants in DC
 ##Overview
-To DC Michelin stars, I began by scraping data on thousands of restaurants in NYC, SF and Chicago (the 3 other US cities with Michelin stars) and DC. I chose this data because most Michelin star restaurants are Zagat-reviewed. 
+To predict DC Michelin stars, I began by scraping data on thousands of restaurants in NYC, SF and Chicago (the 3 other US cities with Michelin stars) and DC. I chose this data because most Michelin star restaurants are Zagat-reviewed. 
 <p align ="center">
 <img src ="/Predicting%20DC%20Michelin%20Restaurants/images/Zagat.png" />
 </p>
